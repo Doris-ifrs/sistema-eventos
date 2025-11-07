@@ -220,10 +220,7 @@ public class MainWeb {
             participante.setEmail(email);
             participante.setDataNascimento(dataNascimento);
             var foto = ctx.uploadedFile("foto");
-            // System.out.println(foto.filename());
-            // System.out.println(foto.contentType());
-            // System.out.println(foto.size());
-            // System.out.println(foto.content().toString());
+            
             participante.setFoto(foto.content().readAllBytes());
             // TODO: tamanho maximo
             if (foto.size() == 0 || foto.contentType().equals("image/jpeg")) {
