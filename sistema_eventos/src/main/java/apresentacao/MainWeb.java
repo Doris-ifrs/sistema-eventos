@@ -33,7 +33,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  *
- * @author iapereira
+ * @author Doris-ifrs
  */
 public class MainWeb {
 
@@ -151,7 +151,7 @@ public class MainWeb {
             }
             int qtde = new ParticipanteDAO().quantidadePaginas();
             model.put("vetParticipante", new ParticipanteDAO().obterPorPagina(pagina));
-            model.put("mensagem_boas_vindas", "E ai meu!, blzura?");
+            model.put("mensagem_boas_vindas", "Gestão de Eventos");
 
             if (qtde > 1 && pagina == 0) {
                 model.put("proximo", 1);
